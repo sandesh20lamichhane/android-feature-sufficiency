@@ -1,6 +1,0 @@
-# Strictly nested P < M < S, plus D. Nesting is what makes the ablation
-# attributable to added features rather than a changed representation.
-sets: [P, M, S]
-binarize: true
-min_frequency: 3        # drop features seen in <3 training apps
-fit_vocab_on: train     # never on the full dataset -- that leaks
