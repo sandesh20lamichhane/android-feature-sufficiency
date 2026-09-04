@@ -1,0 +1,17 @@
+name: ci
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -r environment/requirements.txt
+      - run: pip install -e ".[dev]"
+      - run: ruff check src tests
+      - run: pytest -q
+      # The smoke experiment runs on synthetic data, so CI verifies the whole
+      # pipeline -- checkpointing, metrics, evasion -- without any real dataset.
+      - run: afs-run --experiment 00_smoke --data-root /tmp/afs-data

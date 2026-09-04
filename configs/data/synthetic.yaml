@@ -1,0 +1,10 @@
+kind: synthetic
+params:
+  n: 6000
+  n_perm: 60
+  n_code: 300
+  prevalence: 0.3
+  drift: 0.6      # how fast the permission signal decays over time
+  seed: 0
+provenance:
+  note: "Simulated. Bakes in the era-artifact hypothesis on purpose."

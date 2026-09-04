@@ -1,0 +1,13 @@
+data: synthetic
+models: [linear_svm]
+feature_sets: [P, S]
+baseline_arm: "P::linear_svm"
+seed: 0
+n_boot: 200
+split: {protocol: random, test_size: 0.3, seed: 0}
+evasion:
+  enabled: true
+  threshold_fpr: 0.01
+  max_samples: 150
+  max_flips: 100
+  shard_size: 50

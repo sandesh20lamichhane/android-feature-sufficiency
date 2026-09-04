@@ -1,0 +1,10 @@
+kind: cicmaldroid
+params:
+  include_riskware: false     # run both ways; see notes
+  require_dynamic: true       # drop samples that failed to execute
+provenance:
+  collected: "2017-12 to 2018-12"
+  classes: [adware, banking, sms, riskware, benign]
+  warnings:
+    - "Not all samples executed in the sandbox; dynamic subset is non-randomly smaller."
+    - "Riskware is definitionally over-permissioned -> structurally favours arm P."

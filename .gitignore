@@ -1,0 +1,38 @@
+# ---- Never commit data or artifacts -------------------------------
+afs-data/
+/data/
+*.parquet
+*.npz
+*.npy
+*.joblib
+*.pkl
+*.apk
+*.dex
+/runs/
+/cache/
+
+# ---- Secrets ------------------------------------------------------
+.env
+*.token
+secrets.yaml
+androzoo_api_key*
+
+# ---- Python -------------------------------------------------------
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+.coverage
+htmlcov/
+
+# ---- Notebooks ----------------------------------------------------
+.ipynb_checkpoints/
+
+# ---- OS -----------------------------------------------------------
+.DS_Store
+
+.venv/
+venv/

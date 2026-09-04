@@ -1,0 +1,12 @@
+kind: drebin
+params:
+  benign_source: androzoo          # DECISION: see docs/decisions/0002
+  benign_date_range: ["2010-08-01", "2012-10-31"]
+  benign_market: google_play
+  n_benign: null                   # null = all matched
+provenance:
+  malware: "Drebin ground truth, 5560 samples, 179 families, Aug 2010 - Oct 2012"
+  benign: "MUST be documented; Drebin ships no benign corpus"
+  warning: >
+    Whatever benign corpus is chosen silently determines the result and makes
+    cross-paper comparison meaningless unless stated. State it in the paper.
