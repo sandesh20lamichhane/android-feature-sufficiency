@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Environment / credentials
+.env
+.env.*
+*.pem
+*.key
+credentials.json
+secrets.json
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Local data and artifacts
+data/
+datasets/
+artifacts/
+outputs/
+checkpoints/
+
+# Large/generated files
+*.parquet
+*.pkl
+*.pickle
+*.joblib
+*.pt
+*.pth
+*.h5
+*.hdf5
+
+# Temporary files
+tmp/
+temp/
+.cache/

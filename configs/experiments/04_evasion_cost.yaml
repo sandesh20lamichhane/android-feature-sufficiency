@@ -1,0 +1,15 @@
+# Weeks 3-5. The contribution: equal accuracy, unequal security.
+data: synthetic
+models: [linear_svm, lightgbm]
+feature_sets: [P, M, S]
+baseline_arm: "P::linear_svm"
+seed: 0
+n_boot: 1000
+split: {protocol: random, test_size: 0.3, seed: 0}
+evasion:
+  enabled: true
+  threshold_fpr: 0.001      # attack the operating point that matters
+  remove_penalty: 4.0
+  max_samples: 2000
+  max_flips: 200
+  shard_size: 250

@@ -1,0 +1,10 @@
+# Week 1 gate. Reproduce the known result: random split, aggregate metrics.
+# If the gap is NOT tiny here, stop and reconsider -- you have a different paper.
+data: synthetic          # swap to drebin / cicmaldroid once loaders are done
+models: [linear_svm, lightgbm]
+feature_sets: [P, M, S]
+baseline_arm: "P::linear_svm"
+seed: 0
+n_boot: 1000
+split: {protocol: random, test_size: 0.3, seed: 0}
+evasion: {enabled: false}

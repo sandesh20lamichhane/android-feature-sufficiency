@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+title: "Feature-Set Sufficiency in Android Malware Detection"
+message: "If you use this code, please cite it."
+authors:
+  - family-names: Lamichhane
+    given-names: S.
+repository-code: "https://github.com/<user>/android-feature-sufficiency"
+license: MIT
+version: 0.1.0
